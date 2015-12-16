@@ -34,7 +34,7 @@ Hero Image / Title Styles
 	top: 0;
 	width: 100%;
 	height: 100%;
-	background: rgba(0,0,0,0.25);
+	background: rgba(0,0,0,0.15);
 	content: "";
 }
 
@@ -241,7 +241,7 @@ Movie-Single Hero Image and Title Styles
 	top: 0;
 	width: 100%;
 	height: 100%;
-	background: rgba(0,0,0,0.25);
+	background: rgba(0,0,0,0.15);
 	content: "";
 }
 
@@ -395,7 +395,7 @@ Media Queries / Responsive Styles
 	}
 }
 @media (max-width: 767px) {
-	#hero-image-single #hero-title {
+	#hero-image-single #hero-title, #hero-image-notFound #hero-title {
 		width: 75%;
 	}	
 }
@@ -412,7 +412,7 @@ Media Queries / Responsive Styles
 	}
 }
 @media (max-width: 500px) {
-	#hero-image #hero-title {
+	#hero-image #hero-title  {
 		width: 65%;
 	}	
 }
@@ -443,12 +443,33 @@ Media Queries / Responsive Styles
 	}
 }
 
+/* Decrease the height of the hero images on mobile devices */
+@media (max-width: 767px) {
+	#hero-image, #hero-image-single, #hero-image-notFound {
+		height: 400px;
+	}
+}
+
+/* Increase the width of the hero title on very small devices */
+@media(max-width: 400px) {
+	#hero-image-single #hero-title, #hero-image-notFound #hero-title,
+	#hero-image #hero-title {
+		width: 90%;
+		font-size: 0.95em;
+	}
+}
 
 
 
 
 
+/* -----------------------------
 
+
+Page Not Found Template Styles
+
+
+-------------------------------- */
 
 #hero-image-notFound {
 	height: 550px;
@@ -467,7 +488,7 @@ Media Queries / Responsive Styles
 	top: 0;
 	width: 100%;
 	height: 100%;
-	background: rgba(0,0,0,0.25);
+	background: rgba(0,0,0,0.15);
 	content: "";
 }
 
