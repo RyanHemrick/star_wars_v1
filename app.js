@@ -7,6 +7,10 @@ var routes = require('./routes');
 
 var path = require('path');
 
+var favicon = require('serve-favicon');
+
+app.use(favicon(__dirname + '/public/images/favicon.ico'));
+
 // Set the template language to ejs
 app.set('view engine', 'ejs');
 
